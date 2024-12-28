@@ -1,0 +1,109 @@
+/*General styling*/
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+header {
+    /*background-color: #4b0082;*/
+    background-image: url('./images/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40px;
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+    z-index: -1;
+}
+
+/*Container */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    top: -120px;
+    z-index: 1;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.title img {
+    color: #4b0082;
+}
+.title h1 {
+    font-size: 1.8rem;
+    color: #4b0082;
+    margin-bottom: 20px;
+}
+.accordion h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #4b0082;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.accordion .icon {
+    font-size: 1.5rem;
+    color: #6a0dad;
+    transition: transform 0.3s ease;
+}
+.accordion .icon.expanded {
+    transform: rotate(45deg);
+}
+
+/* styling paragraphs */
+.accordion p {
+    display: none;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/*FAQ Hover and Expanded State*/
+.accordion h3:hover {
+    color: #6a0dad;
+}
+.accordion.expanded p {
+    display: block;
+}
+.attribution {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+.accordion a {
+    color: #4b0082;
+    text-decoration: none;
+}
+.accordion a:hover {
+    text-decoration: underline;
+}
+
+/*Media Queries for Mobile Screens*/
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    .accordion h3 {
+        font-size: 1rem;
+    }
+    .accordion p {
+        font-size: 0.9rem;
+    }
+    .attribution {
+        font-size: 0.7rem;
+    }
+}
